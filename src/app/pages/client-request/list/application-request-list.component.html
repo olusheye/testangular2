@@ -1,0 +1,13 @@
+<div *ngIf="clientRequests && clientRequests.length != 0; else templateName">
+  <table class="table">
+    <tr>
+      <th>Client Request</th>
+    </tr>
+    <tr *ngFor="let clientRequest of clientRequests; let i = index">
+      <th>{{ clientRequest }}</th>
+    </tr>
+  </table>
+</div>
+<ng-template #templateName>
+  No request to display
+</ng-template>

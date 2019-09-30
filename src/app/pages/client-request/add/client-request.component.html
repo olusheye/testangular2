@@ -1,0 +1,58 @@
+<!-- <div class="alert alert-danger alert-dismissible fade show col-md-7" role="alert">
+  @TempData["Msg"]
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> -->
+
+
+<h1 class="h3 mb-2 text-gray-800">Request Api Access</h1>
+<p class="mb-4">(request access to a registered API)</p>
+
+<div class="row">
+  <div class="col-md-7">
+    <form asp-action="AddClientRequest" class="form-horizontal">
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <div class="form-group">
+            <label class="control-label"
+              >APIs <small>(list of available APIs)</small>
+            </label>
+            <select
+              asp-for="Resource"
+              class="form-control"
+              id="resoureId"
+              required
+            >
+              <option value="">--Select Api--</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label"
+              >Description
+              <small
+                >(a brief description of the application requesting
+                access.)</small
+              ></label
+            >
+            <textarea
+              asp-for="ClientDescription"
+              class="form-control"
+              id="desc"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <button
+              type="submit"
+              id="createClient"
+              class="submit-once d-sm-inline-block btn btn-sm btn-primary shadow-sm offset-9"
+            >
+              Submit Request
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
